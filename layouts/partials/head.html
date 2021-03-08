@@ -7,7 +7,7 @@
 {{- else if not .p1.IsHome -}}
 {{- template "title" (dict "p1" .p1.Site.Home "p2" .p2 ) -}}
 {{- end -}}
-{{- if .p1.IsHome -}}{{ .p1.Title | default "Index of ~" -}}{{- if and (eq .p2 .p1)  -}}/{{- end -}}{{- else -}}/{{- path.Base .p1.RelPermalink -}}{{- end -}}
+{{- if .p1.IsHome -}}{{ .p1.Title | default "Index of ~" -}}{{- if and (eq .p2 .p1) -}}/{{- end -}}{{- else -}}/{{- path.Base .p1.RelPermalink -}}{{- end -}}
 {{- end -}}
 
 <head>

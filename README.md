@@ -14,14 +14,14 @@ Hugo Extended Version
 
 ```
 # at the root folder of your site
-git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home
+git clone https://github.com/sasidakh/the-roots-home.git themes/the-roots-home
 ```
 
 Hugo Basic Version
 
 ```
 # at the root folder of your site
-git clone https://github.com/rmsubekti/the-roots-home.git themes/the-roots-home
+git clone https://github.com/sasidakh/the-roots-home.git themes/the-roots-home
 cp -r themes/the-roots-home/exampleSite/resources .  #don't forget the dot 😄
 ```
 

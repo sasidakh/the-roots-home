@@ -19,7 +19,7 @@
 <li class="breadcrumb-item {{ if eq .p1 .p2 -}}active{{- end}} {{if .p1.IsPage -}}hidden{{- end}}" {{ if eq .p1 .p2 -}}aria-current="page"{{- end}}
   itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
   <a itemtype="https://schema.org/Thing" itemprop="item" href="{{- .p1.Permalink -}}">
-    <span itemprop="name">{{ if .p1.IsHome }}{{- .p1.Title | default "Index of ~" -}} {{ else }}{{- path.Base .p1.Permalink -}} {{ end }}</span>
+    <span itemprop="name">{{ if .p1.IsHome }}{{- .p1.Title | default "~" -}} {{ else }}{{- path.Base .p1.Permalink -}} {{ end }}</span>
   </a>
   <meta itemprop="position" content="{{- if .p1.IsPage -}}{{- add .p1.Parent.Weight 1 -}} {{- else -}} {{- .p1.Weight -}} {{- end -}}" />
 </li>

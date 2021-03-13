@@ -102,8 +102,21 @@
         }
     }
   }
-
-
+  section div.keys-list {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed $grey-color-light;
+    border-bottom: 1px dashed $grey-color-light;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  section div.social-list {
+    a {
+      color: $grey-color;
+      font-size: $small-font-size * .80; 
+    }
+  }
+  
   h3.item-title {
     display: inline-block;
     @include relative-font-size(1);

@@ -42,5 +42,27 @@
         </div>
     </div>
     {{ end }}
+    {{ if .IsHome }}
+    <div class="keys-list">
+    {{ range .Site.Params.keys }}
+    {{ $target := "_blank" }}
+    {{ if isset . "target" }}
+    {{ $target = .target }}
+    {{ end }}
+    <div class="keys-item">
+        <a title="{{ .name | humanize }}" target="{{ $target }}"  rel="noopener" href="{{ .url }}">{{ .handle }}</a>&nbsp;
+    </div>
+    {{ end }}
+    </div>
+    <div class="social-list">
+    {{ range .Site.Params.social }}
+    {{ $target := "_blank" }}
+    {{ if isset . "target" }}
+    {{ $target = .target }}
+    {{ end }}
+        <a class="social-item" title="{{ .name | humanize }}" target="{{ $target }}"  rel="noopener" href="{{ .url }}">{{ partial "svg.html" . }}</a>&nbsp;
+    {{ end }}
+    </div>    
+    {{ end }}
 </section>
 {{ end }}

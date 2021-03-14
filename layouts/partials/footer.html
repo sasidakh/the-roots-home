@@ -1,6 +1,6 @@
 <footer class="site-footer">
-	<span class="left">Built with Hugo and emacs org mode </span> 
+	<span class="left">{{ .Site.Params.footerLeft | safeHTML }}</span> 
 	<span class="right">
-		<em>{{ if .Site.Author }}{{.Site.Author.name}}{{else}}The Root's Home{{end}}</em>
+		<em>{{ .Site.Params.footerRight | safeHTML }}</em>
 	</span>
 </footer>

@@ -8,7 +8,7 @@
 		<a href="{{ .Site.BaseURL}}">{{.Site.Title}}</a>
     </h1>
 </header>
-{{if not .IsPage }}<h3 class="page-description">{{ cond .IsHome (.Site.Params.Description | default .Site.Title) (.Title | default .Content)}}</h3>{{ end }}
+{{if not .IsPage }}<h3 class="page-description">{{ cond .IsHome (.Site.Params.Description | default .Site.Title) (.Title | default .Content) | safeHTML}}</h3>{{ end }}
 {{- define "breadcrumb" -}}
 {{- if .p1.Parent -}}
 {{- template "breadcrumb" (dict "p1" .p1.Parent "p2" .p2 ) -}}
